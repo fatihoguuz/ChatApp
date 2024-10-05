@@ -30,9 +30,9 @@ class ChatVC: UIViewController {
         textView.autocorrectionType = .no
         textView.autocapitalizationType = .none
         textView.returnKeyType = .default
-        textView.textContainerInset = UIEdgeInsets(top: 9, left: 9, bottom: 10, right: 30)
+        textView.textContainerInset = UIEdgeInsets(top: 12, left: 10, bottom: 10, right: 30)
         textView.backgroundColor = .gray
-        textView.layer.cornerRadius = 35
+        textView.layer.cornerRadius = 30
         textView.font = UIFont.systemFont(ofSize: 18)
         return textView
     }()
@@ -40,7 +40,7 @@ class ChatVC: UIViewController {
     lazy var sendImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(systemName: "paperplane")
+        imageView.image = UIImage(systemName: "paperplane.circle.fill")
         imageView.tintColor = .label
         imageView.contentMode = .scaleAspectFit
         imageView.isUserInteractionEnabled = true
@@ -89,16 +89,16 @@ class ChatVC: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: 0),
             
             // TextView Constraints
-            textView.topAnchor.constraint(equalTo: tableView.bottomAnchor,constant: -110),
+            textView.topAnchor.constraint(equalTo: tableView.bottomAnchor,constant: -100),
             textView.leadingAnchor.constraint(equalTo: view.leadingAnchor,constant: 10),
             textView.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
             textView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -40),
                         
             // TableView Constraints
-            sendImageView.bottomAnchor.constraint(equalTo: textView.bottomAnchor),
+            sendImageView.bottomAnchor.constraint(equalTo: textView.bottomAnchor,constant: -5),
             sendImageView.trailingAnchor.constraint(equalTo: textView.trailingAnchor,constant: -5),
-            sendImageView.heightAnchor.constraint(equalToConstant: 80),
-            sendImageView.widthAnchor.constraint(equalToConstant: 50)
+            sendImageView.heightAnchor.constraint(equalToConstant: 50),
+            sendImageView.widthAnchor.constraint(equalToConstant: 40)
         ])
     }
     @objc private func didTapSend() {
