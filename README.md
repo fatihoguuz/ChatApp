@@ -5,4 +5,4 @@ Hi everyone, my new application is Chat App is finished. While making this appli
 - Image loading and caching using SDWebImage.
 - Built using UIKit for a smooth and native iOS experience.
 
-https://github.com/user-attachments/assets/23aaf1f5-d0ea-4921-8e73-f16bdc13ba17
+https://github.com/user-attachments/assets/05be3712-6e70-4c0e-a4cc-757c056ed9d1
